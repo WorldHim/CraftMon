@@ -17,10 +17,6 @@ mc_port = conf['server']['port']
 mc_query = conf['server']['query']
 mc_name = conf['server']['name']
 mc_logo = conf['server']['logo']
-mc_preview_title = conf['server']['preview']['title']
-mc_preview_descr = conf['server']['preview']['descr']
-mc_preview_images = conf['server']['preview']['images']
-join_content = conf['server']['contact']['content']
 
 host = conf['web']['host']
 port = conf['web']['port']
@@ -66,10 +62,6 @@ def home():
                             current = len(res.players.list),
                             maxp = res.players.max,
                             logo = mc_logo,
-                            preview_title = mc_preview_title,
-                            preview_descr = mc_preview_descr,
-                            preview_images = mc_preview_images,
-                            join_content = join_content,
                             player_list = player_list,
                             offline = offline)
     else:
@@ -79,10 +71,6 @@ def home():
                             port = mc_port,
                             show_info = mc_show_info,
                             logo = mc_logo,
-                            preview_title = mc_preview_title,
-                            preview_descr = mc_preview_descr,
-                            preview_images = mc_preview_images,
-                            join_content = join_content,
                             offline = offline)
         
 
