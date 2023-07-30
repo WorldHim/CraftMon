@@ -81,6 +81,3 @@ def home():
 if __name__ == '__main__':
     server = pywsgi.WSGIServer((host, port), app)
     server.serve_forever()
-    print('* Serving WSGI Server CraftMon')
-    print('* Running on all addresses (%s)' %host)
-    print('* Running on port:',port)
