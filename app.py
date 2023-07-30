@@ -41,7 +41,7 @@ def home():
         offline = True
     if not offline:
         cleaned_motd = re.sub(r'§[a-f0-9klmnor]', '', res.motd)
-        cleaned_motd = re.sub(r'[^a-zA-Z0-9\s]', '', cleaned_motd)
+        cleaned_motd = re.sub(r'[^a-zA-Z0-9.\s]', '', cleaned_motd)
         player_list = []
         for player in res.players.list:
             try:
