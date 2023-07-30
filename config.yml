@@ -6,6 +6,8 @@ web:
 server:
   # 显示服务器连接信息
   show-info: true
+  # 显示服务器端口
+  show-port: false
   # 服务器名字
   name: Minecraft Server
   # 服务器地址

@@ -12,6 +12,7 @@ with open('config.yml', encoding='utf8') as f:
     conf = yaml.load(f.read(), Loader=yaml.FullLoader)
 
 mc_show_info = conf['server']['show-info']
+mc_show_port = conf['server']['show-port']
 mc_host = conf['server']['host']
 mc_port = conf['server']['port']
 mc_query = conf['server']['query']
@@ -58,6 +59,7 @@ def home():
                             host = mc_host,
                             port = mc_port,
                             show_info = mc_show_info,
+                            show_port = mc_show_port,
                             motd = cleaned_motd,
                             current = len(res.players.list),
                             maxp = res.players.max,
@@ -70,6 +72,7 @@ def home():
                             host = mc_host,
                             port = mc_port,
                             show_info = mc_show_info,
+                            show_port = mc_show_port,
                             logo = mc_logo,
                             offline = offline)
         

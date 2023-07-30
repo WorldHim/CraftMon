@@ -34,19 +34,24 @@
 				<header>
 					<h1>{{ name }}</h1>
 					{% if offline %}
-					<p>服务器目前不在线~</p>
+						<p>服务器目前不在线~</p>
 					{% else %}
-					<p>{{ motd }}</p>
+						<p>{{ motd }}</p>
 					{% endif %}
 					{% if show_info %}
-					<p>服务器地址：<strong>{{host}}:{{port}}</strong></p>
+						<p>服务器地址：
+						<strong>{{host}}</strong>
+						{% if show_port %}
+							<strong>:{{port}}</strong>
+						{% endif %}
+						</p>
 					{% endif %}
 					{% if not offline %}
-					<hr>
-					<p>当前在线人数：{{ current }}/{{ maxp }}</p>
-					{% for player in player_list %}
-					<p><img src={{player.img}} height="40px"> {{player.name}}</p>
-					{% endfor %}
+						<hr>
+						<p>当前在线人数：{{ current }}/{{ maxp }}</p>
+						{% for player in player_list %}
+							<p><img src={{player.img}} height="40px"> {{player.name}}</p>
+						{% endfor %}
 					{% endif %}
 				</header>
 			</article>
