@@ -3,6 +3,7 @@ import yaml
 import re
 import requests
 from flask import Flask, render_template, send_from_directory
+from gevent import pywsgi
 from utils.mcclient import QueryClient
 
 app = Flask(__name__)
@@ -78,4 +79,8 @@ def home():
         
 
 if __name__ == '__main__':
-    app.run(host, port)
+    server = pywsgi.WSGIServer((host, port), app)
+    server.serve_forever()
+    print('* Serving WSGI Server CraftMon')
+    print('* Running on all addresses (%s)' %host)
+    print('* Running on port:',port)

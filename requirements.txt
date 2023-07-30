@@ -4,4 +4,5 @@ pytest-cov ~= 4.0.0
 mypy ~= 1.2.0
 requests
 flask
+gevent
 pyyaml
