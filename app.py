@@ -4,7 +4,7 @@ import re
 import requests
 from flask import Flask, render_template, send_from_directory
 from gevent import pywsgi
-from utils.mcclient import QueryClient
+from mcclient import QueryClient
 
 app = Flask(__name__)
 app.template_folder = 'templates'
